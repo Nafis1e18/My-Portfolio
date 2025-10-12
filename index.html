@@ -1,0 +1,209 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>NAFIS AHMED | Portfolio</title>
+    <style>
+        :root {
+            --bg: #0f1724;
+            --card: #0b1220;
+            --accent: #06b6d4;
+            --muted: #9aa6b2;
+            --glass: rgba(255, 255, 255, 0.04);
+            --maxw: 960px;
+        }
+
+        * {
+            box-sizing: border-box
+        }
+
+        html,
+        body {
+            height: 100%;
+            margin: 0;
+            font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+            background: linear-gradient(180deg, #071422 0%, #0d1530 100%);
+            color: #e6eef3
+        }
+
+        .wrap {
+            max-width: var(--maxw);
+            margin: 36px auto;
+            padding: 20px
+        }
+
+        .card {
+            background: linear-gradient(180deg, var(--card), rgba(5, 10, 18, 0.6));
+            border-radius: 14px;
+            padding: 28px;
+            box-shadow: 0 8px 30px rgba(2, 6, 23, 0.6);
+        }
+
+        header.top {
+            display: flex;
+            gap: 20px;
+            align-items: center
+        }
+
+        .avatar {
+            width: 140px;
+            height: 140px;
+            border-radius: 20px;
+            overflow: hidden;
+            border: 3px solid rgba(255, 255, 255, 0.06);
+            flex: 0 0 140px
+        }
+
+        .avatar img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block
+        }
+
+        .title {
+            flex: 1
+        }
+
+        .name {
+            font-size: 1.6rem;
+            margin: 0 0 6px 0;
+            color: #fff
+        }
+
+        .role {
+            color: var(--muted);
+            margin: 0
+        }
+
+        .bio {
+            margin-top: 16px;
+            color: var(--muted);
+            line-height: 1.55
+        }
+
+        .actions {
+            margin-top: 22px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 10px 16px;
+            border-radius: 999px;
+            background: var(--glass);
+            color: var(--accent);
+            text-decoration: none;
+            font-weight: 600;
+            border: 1px solid rgba(255, 255, 255, 0.03)
+        }
+
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 18px rgba(6, 182, 212, 0.08)
+        }
+
+        h2.section {
+            color: #cfeff6;
+            margin: 28px 0 12px
+        }
+
+        ul.links {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 12px
+        }
+
+        ul.links li a {
+            display: block;
+            padding: 14px;
+            border-radius: 10px;
+            background: linear-gradient(180deg, rgba(255, 255, 255, 0.02), rgba(255, 255, 255, 0.01));
+            color: #e6eef3;
+            text-decoration: none;
+            border: 1px solid rgba(255, 255, 255, 0.03)
+        }
+
+        ul.links li a strong {
+            display: block;
+            color: var(--accent)
+        }
+
+        footer {
+            margin-top: 26px;
+            text-align: center;
+            color: var(--muted);
+            font-size: 0.9rem
+        }
+
+        @media (max-width:700px) {
+            header.top {
+                flex-direction: column;
+                align-items: center
+            }
+
+            .title {
+                text-align: center
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrap">
+        <div class="card">
+            <header class="top">
+                <div class="avatar">
+                    <img src="nafis.jpg" alt="NAFIS AHMED photo">
+                </div>
+                <div class="title">
+                    <h1 class="name">NAFIS AHMED</h1>
+                    <p class="role">Computer Science Student • Web & JavaFX Developer</p>
+                    <p class="bio">I build small, useful apps and clean user interfaces. My projects include JavaFX
+                        games, a student registration form, and web pages. I enjoy learning UI design and improving
+                        usability through simple, well-tested interactions.</p>
+                    <div class="actions">
+                        <a class="btn" href="mailto:nirobnafis3@gmail.com">✉ Email</a>
+                        <a class="btn" href="https://www.linkedin.com/in/nafis-ahmed-id15/ " target="_blank" rel="noopener">🔗 LinkedIn</a>
+                        <a class="btn" href="resume.pdf" target="_blank">📄 Resume (PDF)</a>
+                    </div>
+                </div>
+            </header>
+
+            <h2 class="section">Important Documents</h2>
+            <ul class="links">
+                <li><a href="resume.pdf" target="_blank" rel="noopener"><strong>Resume</strong><span>One-page PDF with
+                            contact & skills</span></a></li>
+                <li><a href="best_ui.pdf" target="_blank" rel="noopener"><strong>Best UI Essay</strong><span>Why a UI
+                            works well and how to improve it</span></a></li>
+                <li><a href="worst_ui.pdf" target="_blank" rel="noopener"><strong>Worst UI Essay</strong><span>Problems,
+                            fixes, and root causes</span></a></li>
+            </ul>
+
+            <h2 class="section">Short Projects</h2>
+            <ul class="links">
+                <li><a href="https://github.com/Nafis1e18/Developing-A-2D-Asteroid-Avoiding-Game-using-OpenGL.git"><strong>Avoid Astroid Game</strong><span>Glut library + OpenGL, C++ project</span></a></li>
+                <li><a href="https://github.com/Nafis1e18/BechaKena.git"><strong>BechaKena Mobile App</strong><span>Selling and Purchasing APP, Kotlin Language</span></a>
+                </li>
+                <li><a href="#"><strong>Registration Form</strong><span>Form validation and storage</span></a></li>
+            </ul>
+
+            <footer>
+                &copy; 2025 NAFIS AHMED — Department of Computer Science and Engineering<br>
+                Built as part of Lab Task 1 under instructor Md. Sazzad Hossain.<br>
+                Last updated: October 2025
+              </footer>
+        </div>
+    </div>
+</body>
+
+</html>
