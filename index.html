@@ -2,208 +2,337 @@
 <html lang="en">
 
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>NAFIS AHMED | Portfolio</title>
-    <style>
-        :root {
-            --bg: #0f1724;
-            --card: #0b1220;
-            --accent: #06b6d4;
-            --muted: #9aa6b2;
-            --glass: rgba(255, 255, 255, 0.04);
-            --maxw: 960px;
-        }
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>NAFIS AHMED — Portfolio (Alt Layout)</title>
+  <style>
+    :root {
+      --bg: #0f1724;
+      --card: #0b1220;
+      --muted: #9aa6b2;
+      --accent: #06b6d4;
+      --glass: rgba(255, 255, 255, 0.03);
+      --maxw: 1100px;
+      --radius: 12px;
+    }
 
-        * {
-            box-sizing: border-box
-        }
+    * {
+      box-sizing: border-box
+    }
 
-        html,
-        body {
-            height: 100%;
-            margin: 0;
-            font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
-            background: linear-gradient(180deg, #071422 0%, #0d1530 100%);
-            color: #e6eef3
-        }
+    html,
+    body {
+      height: 100%;
+      margin: 0;
+      font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, Arial;
+      background: linear-gradient(180deg, #071026 0%, #071727 100%);
+      color: #e6eef3
+    }
 
-        .wrap {
-            max-width: var(--maxw);
-            margin: 36px auto;
-            padding: 20px
-        }
+    .container {
+      max-width: var(--maxw);
+      margin: 28px auto;
+      padding: 18px;
+      display: grid;
+      grid-template-columns: 280px 1fr;
+      gap: 20px
+    }
 
-        .card {
-            background: linear-gradient(180deg, var(--card), rgba(5, 10, 18, 0.6));
-            border-radius: 14px;
-            padding: 28px;
-            box-shadow: 0 8px 30px rgba(2, 6, 23, 0.6);
-        }
+    /* SIDEBAR */
+    .sidebar {
+      background: linear-gradient(180deg, var(--card), rgba(4, 8, 15, 0.6));
+      padding: 20px;
+      border-radius: var(--radius);
+      box-shadow: 0 8px 30px rgba(2, 6, 23, 0.6)
+    }
 
-        header.top {
-            display: flex;
-            gap: 20px;
-            align-items: center
-        }
+    .avatar {
+      width: 120px;
+      height: 120px;
+      border-radius: 14px;
+      overflow: hidden;
+      margin: 0 auto;
+      border: 3px solid rgba(255, 255, 255, 0.04)
+    }
 
-        .avatar {
-            width: 140px;
-            height: 140px;
-            border-radius: 20px;
-            overflow: hidden;
-            border: 3px solid rgba(255, 255, 255, 0.06);
-            flex: 0 0 140px
-        }
+    .avatar img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block
+    }
 
-        .avatar img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            display: block
-        }
+    .name {
+      margin: 14px 0 6px;
+      text-align: center;
+      font-size: 1.25rem;
+      font-weight: 700
+    }
 
-        .title {
-            flex: 1
-        }
+    .role {
+      color: var(--muted);
+      text-align: center;
+      margin: 0 0 12px
+    }
 
-        .name {
-            font-size: 1.6rem;
-            margin: 0 0 6px 0;
-            color: #fff
-        }
+    .contact {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      margin-top: 8px
+    }
 
-        .role {
-            color: var(--muted);
-            margin: 0
-        }
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 10px;
+      border-radius: 999px;
+      background: var(--glass);
+      color: var(--accent);
+      text-decoration: none;
+      border: 1px solid rgba(255, 255, 255, 0.03);
+      font-weight: 600
+    }
 
-        .bio {
-            margin-top: 16px;
-            color: var(--muted);
-            line-height: 1.55
-        }
+    .stack {
+      margin-top: 16px
+    }
 
-        .actions {
-            margin-top: 22px;
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px
-        }
+    .stack h4 {
+      margin: 0 0 8px;
+      color: #cfeff6
+    }
 
-        .btn {
-            display: inline-flex;
-            align-items: center;
-            gap: 10px;
-            padding: 10px 16px;
-            border-radius: 999px;
-            background: var(--glass);
-            color: var(--accent);
-            text-decoration: none;
-            font-weight: 600;
-            border: 1px solid rgba(255, 255, 255, 0.03)
-        }
+    .chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px
+    }
 
-        .btn:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 6px 18px rgba(6, 182, 212, 0.08)
-        }
+    .chip {
+      background: rgba(255, 255, 255, 0.02);
+      padding: 6px 8px;
+      border-radius: 8px;
+      font-size: 0.85rem;
+      color: var(--muted);
+      border: 1px solid rgba(255, 255, 255, 0.02)
+    }
 
-        h2.section {
-            color: #cfeff6;
-            margin: 28px 0 12px
-        }
+    /* MAIN */
+    .main {
+      display: flex;
+      flex-direction: column;
+      gap: 18px
+    }
 
-        ul.links {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 12px
-        }
+    .hero {
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0.02), rgba(255, 255, 255, 0.01));
+      padding: 20px;
+      border-radius: var(--radius);
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      border: 1px solid rgba(255, 255, 255, 0.03)
+    }
 
-        ul.links li a {
-            display: block;
-            padding: 14px;
-            border-radius: 10px;
-            background: linear-gradient(180deg, rgba(255, 255, 255, 0.02), rgba(255, 255, 255, 0.01));
-            color: #e6eef3;
-            text-decoration: none;
-            border: 1px solid rgba(255, 255, 255, 0.03)
-        }
+    .hero .intro {
+      flex: 1
+    }
 
-        ul.links li a strong {
-            display: block;
-            color: var(--accent)
-        }
+    .hero h1 {
+      margin: 0;
+      font-size: 1.6rem
+    }
 
-        footer {
-            margin-top: 26px;
-            text-align: center;
-            color: var(--muted);
-            font-size: 0.9rem
-        }
+    .hero p {
+      margin: 8px 0;
+      color: var(--muted);
+      line-height: 1.45
+    }
 
-        @media (max-width:700px) {
-            header.top {
-                flex-direction: column;
-                align-items: center
-            }
+    .hero .actions {
+      display: flex;
+      gap: 10px;
+      margin-top: 8px
+    }
 
-            .title {
-                text-align: center
-            }
-        }
-    </style>
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 14px
+    }
+
+    .card {
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0.02), rgba(255, 255, 255, 0.01));
+      padding: 16px;
+      border-radius: 12px;
+      border: 1px solid rgba(255, 255, 255, 0.03)
+    }
+
+    .card h3 {
+      margin: 0 0 8px
+    }
+
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 12px
+    }
+
+    .project a {
+      display: block;
+      padding: 12px;
+      border-radius: 10px;
+      text-decoration: none;
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0.01), rgba(255, 255, 255, 0.005));
+      border: 1px solid rgba(255, 255, 255, 0.02)
+    }
+
+    .project strong {
+      display: block;
+      color: var(--accent);
+      margin-bottom: 6px
+    }
+
+    footer {
+      color: var(--muted);
+      font-size: 0.9rem;
+      text-align: center;
+      margin-top: 6px
+    }
+
+    /* responsive */
+    @media (max-width:980px) {
+      .container {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width:700px) {
+      .grid {
+        grid-template-columns: 1fr
+      }
+
+      .avatar {
+        width: 100px;
+        height: 100px
+      }
+    }
+  </style>
 </head>
 
 <body>
-    <div class="wrap">
-        <div class="card">
-            <header class="top">
-                <div class="avatar">
-                    <img src="nafis.jpg" alt="NAFIS AHMED photo">
-                </div>
-                <div class="title">
-                    <h1 class="name">NAFIS AHMED</h1>
-                    <p class="role">Computer Science Student • Web & JavaFX Developer</p>
-                    <p class="bio">I build small, useful apps and clean user interfaces. My projects include JavaFX
-                        games, a student registration form, and web pages. I enjoy learning UI design and improving
-                        usability through simple, well-tested interactions.</p>
-                    <div class="actions">
-                        <a class="btn" href="mailto:nirobnafis3@gmail.com">✉ Email</a>
-                        <a class="btn" href="https://www.linkedin.com/in/nafis-ahmed-id15/ " target="_blank" rel="noopener">🔗 LinkedIn</a>
-                        <a class="btn" href="resume.pdf" target="_blank">📄 Resume (PDF)</a>
-                    </div>
-                </div>
-            </header>
+  <div class="container">
+    <aside class="sidebar">
+      <div class="avatar"><img src="nafis.jpg" alt="Nafis Ahmed"></div>
+      <div class="name">NAFIS AHMED</div>
+      <div class="role">CSE Student • Web & JavaFX Developer</div>
 
-            <h2 class="section">Important Documents</h2>
-            <ul class="links">
-                <li><a href="resume.pdf" target="_blank" rel="noopener"><strong>Resume</strong><span>One-page PDF with
-                            contact & skills</span></a></li>
-                <li><a href="best_ui.pdf" target="_blank" rel="noopener"><strong>Best UI Essay</strong><span>Why a UI
-                            works well and how to improve it</span></a></li>
-                <li><a href="worst_ui.pdf" target="_blank" rel="noopener"><strong>Worst UI Essay</strong><span>Problems,
-                            fixes, and root causes</span></a></li>
-            </ul>
+      <div class="contact">
+        <a class="pill" href="mailto:nirobnafis3@gmail.com">✉ Email</a>
+        <a class="pill" href="https://www.linkedin.com/in/nafis-ahmed-id15/" target="_blank" rel="noopener">🔗
+          LinkedIn</a>
+        <a class="pill" href="resume.pdf" target="_blank">📄 Resume</a>
+      </div>
 
-            <h2 class="section">Short Projects</h2>
-            <ul class="links">
-                <li><a href="https://github.com/Nafis1e18/Developing-A-2D-Asteroid-Avoiding-Game-using-OpenGL.git"><strong>Avoid Astroid Game</strong><span>Glut library + OpenGL, C++ project</span></a></li>
-                <li><a href="https://github.com/Nafis1e18/BechaKena.git"><strong>BechaKena Mobile App</strong><span>Selling and Purchasing APP, Kotlin Language</span></a>
-                </li>
-                <li><a href="#"><strong>Registration Form</strong><span>Form validation and storage</span></a></li>
-            </ul>
-
-            <footer>
-                &copy; 2025 NAFIS AHMED — Department of Computer Science and Engineering<br>
-                Built as part of Lab Task 1 under instructor Md. Sazzad Hossain.<br>
-                Last updated: October 2025
-              </footer>
+      <div class="stack">
+        <h4>Tech & Tools</h4>
+        <div class="chips">
+          <span class="chip">C++</span>
+          <span class="chip">Java / JavaFX</span>
+          <span class="chip">HTML & CSS</span>
+          <span class="chip">Kotlin</span>
+          <span class="chip">OpenGL / GLUT</span>
+          <span class="chip">MySQL / SQL</span>
         </div>
-    </div>
+      </div>
+
+      <div class="stack" style="margin-top:18px">
+        <h4>Quick Links</h4>
+        <div style="display:flex;flex-direction:column;gap:8px;margin-top:8px">
+          <a class="pill" href="best_ui.pdf" target="_blank">📘 Best UI Essay</a>
+          <a class="pill" href="worst_ui.pdf" target="_blank">📕 Worst UI Essay</a>
+        </div>
+      </div>
+    </aside>
+
+    <main class="main">
+      <section class="hero">
+        <div class="intro">
+          <h1>Hi, I'm Nafis — I build small, useful apps and clean interfaces.</h1>
+          <p>I enjoy creating JavaFX animations, web pages, and simple games. I focus on usability, clear structure, and
+            lightweight implementations that are easy to maintain and extend.</p>
+
+          <div class="actions">
+            <a class="pill" href="#projects">💡 Projects</a>
+            <a class="pill" href="#contact">📬 Contact</a>
+          </div>
+        </div>
+        <div style="min-width:120px;text-align:center">
+          <div style="font-size:0.9rem;color:var(--muted)">Department</div>
+          <div style="font-weight:700;margin-top:6px">Computer Science & Engineering</div>
+          <div style="margin-top:14px;color:var(--muted);font-size:0.85rem">Updated: October 2025</div>
+        </div>
+      </section>
+
+      <div class="grid">
+        <section id="projects" class="card">
+          <h3>Projects</h3>
+          <div class="projects">
+            <div class="project"><a
+                href="https://github.com/Nafis1e18/Developing-A-2D-Asteroid-Avoiding-Game-using-OpenGL.git"
+                target="_blank"><strong>Avoid Asteroid Game</strong><span>2D OpenGL + GLUT in C++.</span></a></div>
+            <div class="project"><a href="https://github.com/Nafis1e18/BechaKena.git"
+                target="_blank"><strong>BechaKena</strong><span>Selling & Purchasing Android app (Kotlin).</span></a>
+            </div>
+            <div class="project"><a href="#"><strong>Registration Form</strong><span>Validation, storage, and UX
+                  improvements.</span></a></div>
+          </div>
+        </section>
+
+        <section class="card">
+          <h3>Summary & Skills</h3>
+          <p style="color:var(--muted);line-height:1.5">I build small apps and experiment with UI patterns. Recent work
+            includes a JavaFX
+            animation project, a student registration form (with validations) and OpenGL games. I'm comfortable with
+            competitive programming problems, data structures, and algorithms.</p>
+
+          <div style="display:flex;gap:8px;margin-top:12px;flex-wrap:wrap">
+            <div class="chip">Algorithms</div>
+            <div class="chip">Data Structures</div>
+            <div class="chip">UI Design</div>
+            <div class="chip">OpenGL</div>
+          </div>
+        </section>
+
+        <section class="card">
+          <h3>Important Documents</h3>
+          <div style="display:flex;flex-direction:column;gap:10px;margin-top:8px">
+            <a href="resume.pdf" target="_blank" class="project"><strong>Resume</strong><span>One-page PDF with contact
+                & skills.</span></a>
+            <a href="best_ui.pdf" target="_blank" class="project"><strong>Best UI Essay</strong><span>Why a UI works
+                well and how to improve it.</span></a>
+            <a href="worst_ui.pdf" target="_blank" class="project"><strong>Worst UI Essay</strong><span>Problems, fixes,
+                and root causes.</span></a>
+          </div>
+        </section>
+
+        <section id="contact" class="card">
+          <h3>Get in touch</h3>
+          <p style="color:var(--muted)">Want to collaborate on a small project or need help with JavaFX / front-end?
+            Send a short message — I
+            usually reply by email.</p>
+          <div style="margin-top:12px"><a class="pill" href="mailto:nirobnafis3@gmail.com">✉ nirobnafis3@gmail.com</a>
+          </div>
+        </section>
+      </div>
+
+      <footer>
+        &copy; 2025 NAFIS AHMED — Department of Computer Science and Engineering • Built for Lab Task 1
+      </footer>
+    </main>
+  </div>
 </body>
 
 </html>
